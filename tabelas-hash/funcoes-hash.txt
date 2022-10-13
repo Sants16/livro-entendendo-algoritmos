@@ -1,0 +1,9 @@
+Uma função hash é uma função que mapeia strings e números e relaciona os dois, nessa função inserimos uma string e a mesma retorna um número
+
+Requisitos para uma função hash:
+* Deve ser consistente, pensando no caso de inserirmos a string "maçã" e recebermos o número 4, o mesmo resultado deve ser obtido toda vez em que a string "maçã" for inserida
+* Deve mapear diferentes strings para diferentes números, sendo assim não podemos sempre retornar o número 1 independente da string que inserimos, cada palavra diferente deve ser ligada a número diferente
+
+Uma função hash em conjunto com um array temos uma estrutura de dados chamada tabela hash
+Tabela hash é uma estrutura de dados com uma lógica adicional, usam uma função hash para indicar, de maneira inteligente, onde armazenar os elementos.
+Uma tabela hash contém chaves e valores, ela mapeia chaves e valores 

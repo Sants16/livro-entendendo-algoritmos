@@ -1,0 +1,23 @@
+Colisões são quando duas chaves são indicadas para o mesmo espaço
+Isso é um problema pois as funções hashs indicam espaços no array de forma alfabetica
+
+Então em uma tabela hash a qual eu desejo armazenar o preço da ameixa:
+Ameixa - 2
+
+A ameixa será colocada na primeira posição por começar com a letra A, logo após isso quero inserir o preço da banana na tabela:
+Ameixa - 2 | Banana - 2.50
+Que ficará no segundo lugar por começar com a letra B
+
+Porém caso eu queira armazenar o preço do abacate ele irá sobreescrever o preço da ameixa
+Abacate - 3 | Banana 2.50
+
+Isso que é colisão e precisamos resolve-la, a forma simples seria iniciar uma lista encadeada no espaço compartilhado entre as frutas que iniciam com a mesma letra
+
+Para evitar colisões são necessários:
+* um baixo fator de carga
+* uma boa função hash
+
+FATOR DE CARGA -> número de itens na tabela hash / número total de espaços
+ele mede quantos espaços continuam vazios na nossa tabela hash, um fator de carga maior que 1 indica que temos mais itens do que espaços no nosso array
+Com um fator de carga menor haverá menos colisões e nossa tabela terá um melhor desempenho
+Uma boa regra é sempre redimensionar o array(aumentar seu tamanho) quando o fator de carga for maior que 0.7

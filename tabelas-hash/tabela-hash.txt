@@ -1,0 +1,12 @@
+Utilizamos tabelas hash quando:
+* Desejamos mapear algum item com relação a outro
+* Precisamos pesquisar algo
+
+São úteis para:
+* Modelar relações entre dois itens
+* Filtrar por duplicatas
+* Caching/memorização de dados, em vez de solicitar estes dados do servidor
+
+EX: 
+Lista telefonica - Contato: Polícia, Número: 190
+IP de websites - Website: google.com, IP: 74.125.239.133
