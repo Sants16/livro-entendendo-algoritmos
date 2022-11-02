@@ -20,4 +20,4 @@ Para evitar colisões são necessários:
 FATOR DE CARGA -> número de itens na tabela hash / número total de espaços
 ele mede quantos espaços continuam vazios na nossa tabela hash, um fator de carga maior que 1 indica que temos mais itens do que espaços no nosso array
 Com um fator de carga menor haverá menos colisões e nossa tabela terá um melhor desempenho
-Uma boa regra é sempre redimensionar o array(aumentar seu tamanho) quando o fator de carga for maior que 0.7
+Uma boa regra é sempre redimensionar o array(aumentar seu tamanho, empiricamente foi definido que deve ser criado um array com o dobro do tamanho do original) quando o fator de carga for maior que 0.7
