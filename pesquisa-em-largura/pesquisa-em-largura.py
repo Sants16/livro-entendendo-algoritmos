@@ -17,9 +17,17 @@ fila_de_pesquisa += grafo['voce']
 def pessoa_e_vendedor(nome): #* Verifica se o nome da pessoa termina com a letra m
     return nome[-1] == 'm'
 
-while fila_de_pesquisa: #? Enquanto a fila não estiver vazia
-    pessoa = fila_de_pesquisa.popleft() #? Pega a primeira pessoa da fila
-    if pessoa_e_vendedor(pessoa): #? Verifica se a pessoa é uma vendedora de mangas
-        print(pessoa + ' é um vendedor de manga!')
-    else:
-        fila_de_pesquisa += grafo[pessoa]
+def pesquisa(nome):
+    fila_de_pesquisa = deque()
+    fila_de_pesquisa += grafo[nome]
+    verificados = []
+    while fila_de_pesquisa: #? Enquanto a fila não estiver vazia
+        pessoa = fila_de_pesquisa.popleft() #? Pega a primeira pessoa da fila
+        if not pessoa in verificados:
+            if pessoa_e_vendedor(pessoa): #? Verifica se a pessoa é uma vendedora de mangas
+                print(pessoa + ' é um vendedor de manga!')
+            else:
+                fila_de_pesquisa += grafo[pessoa]
+                verificados.append(pessoa)
+
+pesquisa('voce')
